@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" 
+          href="css/themes/default/jquery.mobile-1.4.5.min.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Kitchen Companion</h1>
+        <a href="#search" data-transition ="slidedown"class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <ul data-role="listview">
+                <li><a href="#recipes" data-transition ="slide">Recipes</a></li>
+                <li><a href="#calendar" data-transition ="slide">Calendar</a></li>
+                <li><a href="#shopping list" data-transition ="slide">Shopping List</a></li>
+                <li><a href="#calorie counter" data-transition ="slide">Calorie Counter</a></li>
+    </ul>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+    
+</div><!-- /page -->
+
+    
+    <div data-role="page" id="recipes">
+
+	<div data-role="header">
+		<h1>Recipes</h1>
+        <a href="#home" data-transition ="slide" data-direction ="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+        <a href="#search" data-transition ="slidedown"class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a>
+
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <ol data-role="listview">
+            <li>Acura</li>
+            <li>Audi</li>
+            <li>BMW</li>
+            <li>Cadillac</li>
+            <li>Ferrari</li>
+    </ol>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+        
+</div><!-- /page -->
+    
+    
+    <div data-role="page" id="calendar">
+
+	<div data-role="header">
+        <h1>Calendar</h1>
+            <a href="#home" data-transition ="slide" data-direction ="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+        
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <ul data-role="listview">
+                <li><a href="#" data-transition ="slide">Monday</a></li>
+                <li><a href="#" data-transition = "slide">Tuesday</a></li>
+                <li><a href="#" data-transition ="slide">Wednesday</a></li>
+                <li><a href="#" data-transition ="slide">Thursday</a></li>
+                <li><a href="#" data-transition ="slide">Friday</a></li>
+                <li><a href="#" data-transition ="slide">Saturday</a></li>
+                <li><a href="#" data-transition ="slide">Sunday</a></li>
+    </ul>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+        
+        </div><!-- /page -->
+
+    
+    <div data-role="page" id="shopping list">
+
+	<div data-role="header">
+		<h1>Shopping List</h1>
+        <a href="#home" data-transition ="slide" data-direction ="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <ol data-role="listview">
+            <li>Acura</li>
+            <li>Audi</li>
+            <li>BMW</li>
+            <li>Cadillac</li>
+            <li>Ferrari</li>
+    </ol>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+        
+</div><!-- /page -->
+
+    
+    <div data-role="page" id="calorie counter">
+
+	<div data-role="header">
+		<h1>Calorie Counter</h1>
+        <a href="#home" data-transition ="slide" data-direction ="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+       <div class="input_fields_wrap">
+            <button class="add_field_button">Add More Fields</button>
+            <div><input type="text" name="mytext[]"></div>
+        </div>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+    
+     <div data-role="page" id="search">
+
+	<div data-role="header">
+		<h1>search</h1>
+        <a href="#home" data-transition ="slidedown" data-direction ="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a>
+
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search recipes..." data-inset="true">
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Banana</a></li>
+        <li><a href="#">Cherry</a></li>
+        <li><a href="#">Cranberry</a></li>
+        <li><a href="#">Grape</a></li>
+        <li><a href="#">Orange</a></li>
+        </ul>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy; Team Red 2016, All Rights Reserved</h4>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+    
+</body>
+</html>
