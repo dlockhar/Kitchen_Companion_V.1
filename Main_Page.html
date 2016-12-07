@@ -12,25 +12,25 @@
 <body>
     <div data-role="page" id="home">
         <div data-role="header">
-            <h1>Kitchen Companion</h1> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
+            <h1 style="color:maroon;">Kitchen Companion</h1> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
         <!-- /header -->
         <div role="main" class="ui-content">
             <ul data-role="listview">
-                <li><a href="#recipes" data-transition="slide">Recipes</a></li>
-                <li><a href="#calendar" data-transition="slide">Calendar</a></li>
-                <li><a href="#shopping list" data-transition="slide">Shopping List</a></li>
-                <li><a href="#calorie counter" data-transition="slide">Calorie Counter</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#recipes" data-transition="slide">Recipes</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#calendar" data-transition="slide">Calendar</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#shopping list" data-transition="slide">Shopping List</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#calorie counter" data-transition="slide">Calorie Counter</a></li>
             </ul>
         </div>
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="recipes">
         <div data-role="header">
-            <h1>Recipes</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
+            <h1 style="color:maroon;">Recipes</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
         <!-- /header -->
         <div role="main" class="ui-content">
             <ol data-role="listview">
@@ -43,37 +43,37 @@
         </div>
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="calendar">
         <div data-role="header">
-            <h1>Calendar</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Calendar</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
         <div role="main" class="ui-content">
             <ul data-role="listview">
-                <li><a href="#Monday" data-transition="slide">Monday</a></li>
-                <li><a href="#Tuesday" data-transition="slide">Tuesday</a></li>
-                <li><a href="#Wednesday" data-transition="slide">Wednesday</a></li>
-                <li><a href="#Thursday" data-transition="slide">Thursday</a></li>
-                <li><a href="#Friday" data-transition="slide">Friday</a></li>
-                <li><a href="#Saturday" data-transition="slide">Saturday</a></li>
-                <li><a href="#Sunday" data-transition="slide">Sunday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Monday" data-transition="slide">Monday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Tuesday" data-transition="slide">Tuesday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Wednesday" data-transition="slide">Wednesday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Thursday" data-transition="slide">Thursday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Friday" data-transition="slide">Friday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Saturday" data-transition="slide">Saturday</a></li>
+                <li><a style="color:maroon; background-color:gold;" href="#Sunday" data-transition="slide">Sunday</a></li>
             </ul>
         </div>
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="shopping list">
         <div data-role="header">
-            <h1>Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
         <input type='text' id='idea' />
-        <input type='button' value='add to list' id='add' />
+        <input style="color:maroon; background-color:gold;" type='button' value='add to list' id='add' />
         <ul id='list'></ul>
         <!-- Defining a listener for our button, specifically, an onclick handler --><script>document.getElementById("add").onclick = function() {
         var text = document.getElementById("idea").value;
@@ -81,50 +81,54 @@
         document.getElementById("list").appendChild(li); } </script>
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="calorie counter">
         <div data-role="header">
-            <h1>Calorie Counter</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Calorie Counter</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
         <div role="main" class="ui-content">
             <div class="input_fields_wrap">
                 <form name="calculator"> Solution
                     <input type="textfield" name="ans" value="">
                     <br>
-                    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-                    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-                    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-                    <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="1" onClick="document.calculator.ans.value+='1'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="2" onClick="document.calculator.ans.value+='2'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="3" onClick="document.calculator.ans.value+='3'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="+" onClick="document.calculator.ans.value+='+'">
                     <br>
-                    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-                    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-                    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-                    <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="4" onClick="document.calculator.ans.value+='4'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="5" onClick="document.calculator.ans.value+='5'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="6" onClick="document.calculator.ans.value+='6'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="-" onClick="document.calculator.ans.value+='-'">
                     <br>
-                    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-                    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-                    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-                    <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="7" onClick="document.calculator.ans.value+='7'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="8" onClick="document.calculator.ans.value+='8'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="9" onClick="document.calculator.ans.value+='9'">
+                    <input style="color:maroon; background-color:gold;" type="button" value="*" onClick="document.calculator.ans.value+='*'">
                     <br>
-                    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-                    <input type="reset" value="Reset">
-                    <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"> </form>
+                    <input style="color:maroon; background-color:gold;" type="button" value="0" onClick="document.calculator.ans.value+='0'">
+                    <input style="color:maroon; background-color:gold;"type="reset" value="Reset">
+                    <input style="color:maroon; background-color:gold;" type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"> </form>
                 <!-- http://www.javascripthtml.com/simple-html-calculator-code-program/ -->
             </div>
         </div>
+         <div data-role="footer">
+        <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
+    <!-- /footer -->
+         </div>
     </div>
     <!-- /content -->
     <div data-role="footer">
-        <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+        <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
     <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="search">
         <div data-role="header">
-            <h1>search</h1> <a href="#home" data-transition="slidedown" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">search</h1> <a href="#home" data-transition="slidedown" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
         <div role="main" class="ui-content">
             <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search recipes..." data-inset="true">
@@ -138,71 +142,135 @@
         </div>
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <!-- /page -->
     <div data-role="page" id="Monday">
         <div data-role="header">
-            <h1>Monday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Monday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+          <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
+
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Tuesday">
         <div data-role="header">
-            <h1>Tuesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Tuesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Wednesday">
         <div data-role="header">
-            <h1>Wednesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Wednesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Thursday">
         <div data-role="header">
-            <h1>Thursday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Thursday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Friday">
         <div data-role="header">
-            <h1>Friday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Friday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Saturday">
         <div data-role="header">
-            <h1>Saturday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Saturday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
     <div data-role="page" id="Sunday">
         <div data-role="header">
-            <h1>Sunday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
+            <h1 style="color:maroon;">Sunday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
+        <form action="action_page.txt">
+              First name:<br>
+                <input type="text" name="firstname" value="Mickey">
+                <br>
+                    Last name:<br>
+                <input type="text" name="lastname" value="Mouse">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
         <!-- /content -->
         <div data-role="footer">
-            <h4>&copy; Team Red 2016, All Rights Reserved</h4> </div>
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
         <!-- /footer -->
     </div>
 </body>
