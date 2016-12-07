@@ -72,13 +72,24 @@
         <div data-role="header">
             <h1 style="color:maroon;">Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <input type='text' id='idea' />
-        <input style="color:maroon; background-color:gold;" type='button' value='add to list' id='add' />
-        <ul id='list'></ul>
-        <!-- Defining a listener for our button, specifically, an onclick handler --><script>document.getElementById("add").onclick = function() {
-        var text = document.getElementById("idea").value;
-        var li = "<li>" + text + "</li>";
-        document.getElementById("list").appendChild(li); } </script>
+        <form>
+            <input type="text" id="text"></input>
+            <input type="button" id="key" value="Add to shopping list"></input>
+            <input type="button" id="key" value="Remove from list"></input>
+        </form>    
+    <div id="blank"></div>
+
+<script>
+$("#key").click(function(){
+    var text = $("#text").val();
+    $("#blank").append('<div class="clean"><input type="checkbox" id="checked"/>'+text+'</div>');
+    
+    $("input[type='checkbox']").on("change", function(){
+        $(this).parent().toggleClass("strike");
+        });
+    
+});
+</script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
