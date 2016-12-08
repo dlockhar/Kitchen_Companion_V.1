@@ -32,9 +32,8 @@
         <div data-role="header">
             <h1 style="color:maroon;">Recipes</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
         <!-- /header -->
-        <form action=("http://api.yummly.com/v1/api/recipes?_app_id=98618b8a&_app_key=eecc59adb1d00cbe4efdf5c7c775e12f&" + RecipeCall) method="get">
-            <input type="text" name="RecipeCall" value="Recipe" id="RecipeCall">
-            <input type="submit" value="Submit"> </form>
+        <form action="functions.js" method="get">
+            <input type="button" value="Search"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -163,76 +162,45 @@
         <div data-role="header">
             <h1 style="color:maroon;">Monday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-    <form id="form-add-todo" class="form-add-todo">
-        <label for="todo">Add Meals</label>
-        <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-        <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
-    </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form>
-        
-    <script>
-        function addTodoItem() {
-  var todoItem = $("#new-todo-item").val();
-  $("#todo-list").append("<li><input type='checkbox'" + 
-                         " name='todo-item-done'" + 
-                         " class='todo-item-done'"+ 
-                         " value='" + todoItem + "' /> " + 
-                         todoItem +
-                         " <button class='todo-item-delete'>"+
-                         "Delete</button></li>");
-  
- $("#new-todo-item").val("");
-}
+        <form id="form-add-todo" class="form-add-todo">
+            <label for="todo">Add Meals</label>
+            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" /> </form>
+        <form id="form-todo-list">
+            <ul id="todo-list" class="todo-list"> </ul>
+        </form>
+        <script>
+            function addTodoItem() {
+                var todoItem = $("#new-todo-item").val();
+                $("#todo-list").append("<li><input type='checkbox'" + " name='todo-item-done'" + " class='todo-item-done'" + " value='" + todoItem + "' /> " + todoItem + " <button class='todo-item-delete'>" + "Delete</button></li>");
+                $("#new-todo-item").val("");
+            }
 
-function deleteTodoItem(e, item) {
-  e.preventDefault();
-  $(item).parent().fadeOut('slow', function() { 
-    $(item).parent().remove();
-  });
-}
+            function deleteTodoItem(e, item) {
+                e.preventDefault();
+                $(item).parent().fadeOut('slow', function () {
+                    $(item).parent().remove();
+                });
+            }
 
-                           
-function completeTodoItem() {  
-  $(this).parent().toggleClass("strike");
-}
-
-
-$(function() {
- 
-   $("#add-todo-item").on('click', function(e){
-     e.preventDefault();
-     addTodoItem()
-   });
-  
-//EVENT DELEGATION
-//#todo-list is the event handler because .todo-item-delete doesn't exist when the document loads, it is generated later by a todo entry
-//http://learn.jquery.com/events/event-delegation/
-  $("#todo-list").on('click', '.todo-item-delete', function(e){
-    var item = this; 
-    deleteTodoItem(e, item)
-  })
-  
-  $(document).on('click', ".todo-item-done", completeTodoItem)
-
-});
-</script>  
-        
->>>>>>> Kitchen_Companion/master
+            function completeTodoItem() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-todo-item").on('click', function (e) {
+                    e.preventDefault();
+                    addTodoItem()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-item-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#todo-list").on('click', '.todo-item-delete', function (e) {
+                    var item = this;
+                    deleteTodoItem(e, item)
+                })
+                $(document).on('click', ".todo-item-done", completeTodoItem)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -242,28 +210,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Tuesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-          <form id="form-add-todo" class="form-add-todo">
-        <label for="todo">Add Meals</label>
-        <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-        <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
-    </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form> 
->>>>>>> Kitchen_Companion/master
+        <form id="form-add-item" class="form-add-item">
+            <label for="item">Add Meals</label>
+            <input type="text" id="new-item" class="new-item" name="item" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-item" class="add-item" value="Add Meal Items" /> </form>
+        <form id="form-item-list">
+            <ul id="item-list" class="item-list"> </ul>
+        </form>
+        <script>
+            function addItem() {
+                var Item = $("#new-item").val();
+                $("#item-list").append("<li><input type='checkbox'" + " name='item-done'" + " class='item-done'" + " value='" + Item + "' /> " + Item + " <button class='item-delete'>" + "Delete</button></li>");
+                $("#new-item").val("");
+            }
+
+            function deleteItem(e, item) {
+                e.preventDefault();
+                $(item).parent().fadeOut('slow', function () {
+                    $(item).parent().remove();
+                });
+            }
+
+            function completeItem() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-item").on('click', function (e) {
+                    e.preventDefault();
+                    addItem()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-item-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#item-list").on('click', '.item-delete', function (e) {
+                    var item = this;
+                    deleteItem(e, item)
+                })
+                $(document).on('click', ".item-done", completeItem)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -273,28 +258,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Wednesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-        <form id="form-add-todo" class="form-add-todo">
-            <label for="todo">Add Meals</label>
-            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-            <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
+        <form id="form-add-Wednesday" class="form-add-Wednesday">
+            <label for="Wednesday">Add Meals</label>
+            <input type="text" id="new-Wednesday" class="new-Wednesday" name="Wednesday" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-Wednesday" class="add-Wednesday" value="Add Meal Items" /> </form>
+        <form id="form-Wednesday-list">
+            <ul id="Wednesday-list" class="Wednesday-list"> </ul>
         </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form>
->>>>>>> Kitchen_Companion/master
+        <script>
+            function addWednesday() {
+                var Wednesday = $("#new-Wednesday").val();
+                $("#Wednesday-list").append("<li><input type='checkbox'" + " name='Wednesday-done'" + " class='Wednesday-done'" + " value='" + Wednesday + "' /> " + Wednesday + " <button class='Wednesday-delete'>" + "Delete</button></li>");
+                $("#new-Wednesday").val("");
+            }
+
+            function deleteWednesday(e, Wednesday) {
+                e.preventDefault();
+                $(Wednesday).parent().fadeOut('slow', function () {
+                    $(Wednesday).parent().remove();
+                });
+            }
+
+            function completeWednesday() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-Wednesday").on('click', function (e) {
+                    e.preventDefault();
+                    addWednesday()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-Wednesday-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#Wednesday-list").on('click', '.Wednesday-delete', function (e) {
+                    var Wednesday = this;
+                    deleteWednesday(e, Wednesday)
+                })
+                $(document).on('click', ".Wednesday-done", completeWednesday)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -304,28 +306,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Thursday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-        <form id="form-add-todo" class="form-add-todo">
-            <label for="todo">Add Meals</label>
-            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-            <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
+        <form id="form-add-Thursday" class="form-add-Thursday">
+            <label for="Thursday">Add Meals</label>
+            <input type="text" id="new-Thursday" class="new-Thursday" name="Thursday" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-Thursday" class="add-Thursday" value="Add Meal Items" /> </form>
+        <form id="form-Thursday-list">
+            <ul id="Thursday-list" class="Thursday-list"> </ul>
         </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form>
->>>>>>> Kitchen_Companion/master
+        <script>
+            function addThursday() {
+                var Thursday = $("#new-Thursday").val();
+                $("#Thursday-list").append("<li><input type='checkbox'" + " name='Thursday-done'" + " class='Thursday-done'" + " value='" + Thursday + "' /> " + Thursday + " <button class='Thursday-delete'>" + "Delete</button></li>");
+                $("#new-Thursday").val("");
+            }
+
+            function deleteThursday(e, Thursday) {
+                e.preventDefault();
+                $(Thursday).parent().fadeOut('slow', function () {
+                    $(Thursday).parent().remove();
+                });
+            }
+
+            function completeThursday() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-Thursday").on('click', function (e) {
+                    e.preventDefault();
+                    addThursday()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-Thursday-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#Thursday-list").on('click', '.Thursday-delete', function (e) {
+                    var Thursday = this;
+                    deleteThursday(e, Thursday)
+                })
+                $(document).on('click', ".Thursday-done", completeThursday)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -335,28 +354,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Friday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-        <form id="form-add-todo" class="form-add-todo">
-            <label for="todo">Add Meals</label>
-            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-            <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
+        <form id="form-add-Friday" class="form-add-Friday">
+            <label for="Friday">Add Meals</label>
+            <input type="text" id="new-Friday" class="new-Friday" name="Friday" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-Friday" class="add-Friday" value="Add Meal Items" /> </form>
+        <form id="form-Friday-list">
+            <ul id="Friday-list" class="Friday-list"> </ul>
         </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form>
->>>>>>> Kitchen_Companion/master
+        <script>
+            function addFriday() {
+                var Friday = $("#new-Friday").val();
+                $("#Friday-list").append("<li><input type='checkbox'" + " name='Friday-done'" + " class='Friday-done'" + " value='" + Friday + "' /> " + Friday + " <button class='Friday-delete'>" + "Delete</button></li>");
+                $("#new-Friday").val("");
+            }
+
+            function deleteFriday(e, Friday) {
+                e.preventDefault();
+                $(Friday).parent().fadeOut('slow', function () {
+                    $(Friday).parent().remove();
+                });
+            }
+
+            function completeFriday() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-Friday").on('click', function (e) {
+                    e.preventDefault();
+                    addFriday()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-Friday-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#Friday-list").on('click', '.Friday-delete', function (e) {
+                    var Friday = this;
+                    deleteFriday(e, Friday)
+                })
+                $(document).on('click', ".Friday-done", completeFriday)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -366,28 +402,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Saturday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-        <form id="form-add-todo" class="form-add-todo">
-            <label for="todo">Add Meals</label>
-            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-            <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
+        <form id="form-add-Saturday" class="form-add-Saturday">
+            <label for="Saturday">Add Meals</label>
+            <input type="text" id="new-Saturday" class="new-Saturday" name="Saturday" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-Saturday" class="add-Saturday" value="Add Meal Items" /> </form>
+        <form id="form-Saturday-list">
+            <ul id="Saturday-list" class="Saturday-list"> </ul>
         </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form> 
->>>>>>> Kitchen_Companion/master
+        <script>
+            function addSaturday() {
+                var Saturday = $("#new-Saturday").val();
+                $("#Saturday-list").append("<li><input type='checkbox'" + " name='Saturday-done'" + " class='Saturday-done'" + " value='" + Saturday + "' /> " + Saturday + " <button class='Saturday-delete'>" + "Delete</button></li>");
+                $("#new-Saturday").val("");
+            }
+
+            function deleteSaturday(e, Saturday) {
+                e.preventDefault();
+                $(Saturday).parent().fadeOut('slow', function () {
+                    $(Saturday).parent().remove();
+                });
+            }
+
+            function completeSaturday() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-Saturday").on('click', function (e) {
+                    e.preventDefault();
+                    addSaturday()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-Saturday-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#Saturday-list").on('click', '.Saturday-delete', function (e) {
+                    var Saturday = this;
+                    deleteSaturday(e, Saturday)
+                })
+                $(document).on('click', ".Saturday-done", completeSaturday)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -397,28 +450,45 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Sunday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-<<<<<<< HEAD
-        <form action="action_page.txt"> First name:
-            <br>
-            <input type="text" name="firstname" value="Mickey">
-            <br> Last name:
-            <br>
-            <input type="text" name="lastname" value="Mouse">
-            <br>
-            <br>
-            <input type="submit" value="Submit"> </form>
-=======
-        <form id="form-add-todo" class="form-add-todo">
-            <label for="todo">Add Meals</label>
-            <input type="text" id="new-todo-item" class="new-todo-item" name="todo" />
-            <input type="submit" id="add-todo-item" class="add-todo-item" value="Add Meal Items" />
+        <form id="form-add-Sunday" class="form-add-Sunday">
+            <label for="Sunday">Add Meals</label>
+            <input type="text" id="new-Sunday" class="new-Sunday" name="Sunday" />
+            <input style="color:maroon; background-color:gold;" type="submit" id="add-Sunday" class="add-Sunday" value="Add Meal Items" /> </form>
+        <form id="form-Sunday-list">
+            <ul id="Sunday-list" class="Sunday-list"> </ul>
         </form>
-  
-    <form id="form-todo-list">
-        <ul id="todo-list" class="todo-list">
-        </ul>
-    </form>
->>>>>>> Kitchen_Companion/master
+        <script>
+            function addSunday() {
+                var Sunday = $("#new-Sunday").val();
+                $("#Sunday-list").append("<li><input type='checkbox'" + " name='Sunday-done'" + " class='Sunday-done'" + " value='" + Sunday + "' /> " + Sunday + " <button class='Sunday-delete'>" + "Delete</button></li>");
+                $("#new-Sunday").val("");
+            }
+
+            function deleteSunday(e, Sunday) {
+                e.preventDefault();
+                $(Sunday).parent().fadeOut('slow', function () {
+                    $(Sunday).parent().remove();
+                });
+            }
+
+            function completeSunday() {
+                $(this).parent().toggleClass("strike");
+            }
+            $(function () {
+                $("#add-Sunday").on('click', function (e) {
+                    e.preventDefault();
+                    addSunday()
+                });
+                //EVENT DELEGATION
+                //#todo-list is the event handler because .todo-Sunday-delete doesn't exist when the document loads, it is generated later by a todo entry
+                //http://learn.jquery.com/events/event-delegation/
+                $("#Sunday-list").on('click', '.Sunday-delete', function (e) {
+                    var Sunday = this;
+                    deleteSunday(e, Sunday)
+                })
+                $(document).on('click', ".Sunday-done", completeSunday)
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
