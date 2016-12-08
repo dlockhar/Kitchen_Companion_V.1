@@ -72,27 +72,37 @@
         <div data-role="header">
             <h1 style="color:maroon;">Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form>
-    <div>
-        <label for="todo">I need:</label>
-        <input type="text" id="todo" />
-    </div>
-    <button id ="add" type="button">Add to your shopping list!</button>
-        </form>
-        <ul>  
-    <div id="blank"></div>
-
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<h1>Todo List</h1>  
+    <input type="text" id="enter_task" placeholder="Enter Task">
+    <input type="submit" id="add" value="Add Task">
+    <p>
+        <ul id="todo_list">
+        </ul>
+    </p>
 <script>
-$(document).ready(function() {
-    $('#add').click(function() {
-        var item = $('#todo')
-        $('ul').prepend("<li>"+item.val()+"</li>");
-    });
-    $('ul').on('click', 'li', function() {
-        $(this).remove();
-    });
+var counter = 1;
+
+function enter_task () {
+        var text = $('#enter_task').val();
+        $('#todo_list').append('<li><span>'+ text + ' </span><input type="submit" id="edit' + counter + '" value="Edit">' + '<input type="submit" class="done" id="delete' + counter + '" value="Delete">' +'</li>');
+  
+$('#edit' + counter).click(function(){
+    $(this).prev().attr('contenteditable','true');
+    $(this).prev().focus();
 });
-</script>
+
+$('#delete' + counter).click(function(){
+    $(this).parent().remove();
+});
+
+  counter++;
+};
+
+$(function() {
+    $('#add').on('click', enter_task);
+});
+    </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
