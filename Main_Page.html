@@ -73,21 +73,24 @@
             <h1 style="color:maroon;">Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
         <form>
-            <input type="text" id="text"></input>
-            <input type="button" id="key" value="Add to shopping list"></input>
-            <input type="button" id="key" value="Remove from list"></input>
-        </form>    
+    <div>
+        <label for="todo">I need:</label>
+        <input type="text" id="todo" />
+    </div>
+    <button id ="add" type="button">Add to your shopping list!</button>
+        </form>
+        <ul>  
     <div id="blank"></div>
 
 <script>
-$("#key").click(function(){
-    var text = $("#text").val();
-    $("#blank").append('<div class="clean"><input type="checkbox" id="checked"/>'+text+'</div>');
-    
-    $("input[type='checkbox']").on("change", function(){
-        $(this).parent().toggleClass("strike");
-        });
-    
+$(document).ready(function() {
+    $('#add').click(function() {
+        var item = $('#todo')
+        $('ul').prepend("<li>"+item.val()+"</li>");
+    });
+    $('ul').on('click', 'li', function() {
+        $(this).remove();
+    });
 });
 </script>
         <!-- /content -->
