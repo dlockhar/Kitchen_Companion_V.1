@@ -32,15 +32,9 @@
         <div data-role="header">
             <h1 style="color:maroon;">Recipes</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> <a href="#search" data-transition="slidedown" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a> </div>
         <!-- /header -->
-        <div role="main" class="ui-content">
-            <ol data-role="listview">
-                <li>Honda</li>
-                <li>Audi</li>
-                <li>BMW</li>
-                <li>Cadillac</li>
-                <li>Ferrari</li>
-            </ol>
-        </div>
+        <form action=("http://api.yummly.com/v1/api/recipes?_app_id=98618b8a&_app_key=eecc59adb1d00cbe4efdf5c7c775e12f&" + RecipeCall) method="get">
+            <input type="text" name="RecipeCall" value="Recipe" id="RecipeCall">
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -72,37 +66,32 @@
         <div data-role="header">
             <h1 style="color:maroon;">Shopping List</h1> <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<h1>Shopping List</h1>  
-    <input  type="text" id="enter_task" placeholder="Add Items Here">
-    <input  style="color:maroon; background-color:gold;" type="submit" id="add" value="Enter Items">
-    <p>
-        <ul id="todo_list">
-        </ul>
-    </p>
-<script>
-var counter = 1;
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <h1>Shopping List</h1>
+        <input type="text" id="enter_task" placeholder="Add Items Here">
+        <input style="color:maroon; background-color:gold;" type="submit" id="add" value="Enter Items">
+        <p>
+            <ul id="todo_list"> </ul>
+        </p>
+        <script>
+            var counter = 1;
 
-function enter_task () {
-        var text = $('#enter_task').val();
-        $('#todo_list').append('<li><span>'+ text + ' </span><input type="submit" id="edit' + counter + '" value="Edit">' + '<input type="submit" class="done" id="delete' + counter + '" value="Delete">' +'</li>');
-  
-$('#edit' + counter).click(function(){
-    $(this).prev().attr('contenteditable','true');
-    $(this).prev().focus();
-});
-
-$('#delete' + counter).click(function(){
-    $(this).parent().remove();
-});
-
-  counter++;
-};
-
-$(function() {
-    $('#add').on('click', enter_task);
-});
-    </script>
+            function enter_task() {
+                var text = $('#enter_task').val();
+                $('#todo_list').append('<li><span>' + text + ' </span><input type="submit" id="edit' + counter + '" value="Edit">' + '<input type="submit" class="done" id="delete' + counter + '" value="Delete">' + '</li>');
+                $('#edit' + counter).click(function () {
+                    $(this).prev().attr('contenteditable', 'true');
+                    $(this).prev().focus();
+                });
+                $('#delete' + counter).click(function () {
+                    $(this).parent().remove();
+                });
+                counter++;
+            };
+            $(function () {
+                $('#add').on('click', enter_task);
+            });
+        </script>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -134,15 +123,15 @@ $(function() {
                     <input style="color:maroon; background-color:gold;" type="button" value="*" onClick="document.calculator.ans.value+='*'">
                     <br>
                     <input style="color:maroon; background-color:gold;" type="button" value="0" onClick="document.calculator.ans.value+='0'">
-                    <input style="color:maroon; background-color:gold;"type="reset" value="Reset">
+                    <input style="color:maroon; background-color:gold;" type="reset" value="Reset">
                     <input style="color:maroon; background-color:gold;" type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)"> </form>
                 <!-- http://www.javascripthtml.com/simple-html-calculator-code-program/ -->
             </div>
         </div>
-         <div data-role="footer">
-        <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
-    <!-- /footer -->
-         </div>
+        <div data-role="footer">
+            <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
+        <!-- /footer -->
+    </div>
     </div>
     <!-- /content -->
     <div data-role="footer">
@@ -174,16 +163,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Monday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-          <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
-
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -193,15 +181,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Tuesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -211,15 +199,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Wednesday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -229,15 +217,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Thursday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -247,15 +235,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Friday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -265,15 +253,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Saturday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
@@ -283,15 +271,15 @@ $(function() {
         <div data-role="header">
             <h1 style="color:maroon;">Sunday</h1> <a href="#calendar" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all">No text</a> </div>
         <!-- /header -->
-        <form action="action_page.txt">
-              First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                    Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <input type="submit" value="Submit">
-            </form> 
+        <form action="action_page.txt"> First name:
+            <br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:
+            <br>
+            <input type="text" name="lastname" value="Mouse">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> </form>
         <!-- /content -->
         <div data-role="footer">
             <h4 style="color:maroon;">&copy; Team Red 2016, All Rights Reserved</h4> </div>
